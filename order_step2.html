@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MCHNRJC');
+    </script>
+    <title>Экспресс-оценка</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="style.css">
+    <!--link(rel="shortcut icon" href="/favicon.ico")-->
+  </head>
+  <body onunload="">
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCHNRJC" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <div class="invoice"><img class="invoice__image"></div>
+    <div class="form invoice__form" id="invoice"><a class="form__button form__button--primary" id="toInvoice" target="_blank">Скачать квитанцию</a><a class="form__button" id="toOrder" href="/order_edit" style="display:none">Готово</a><a class="form__button" id="toDocs" href="/order_step3" style="display:none">К загрузке документов</a><a class="form__button" id="toDone" href="/order_done" style="display:none">Готово</a></div>
+    <div class="popups">
+            <div class="popup" id="popup-register">
+              <div class="popup__close"></div>
+              <div class="popup__text">Войти в личный кабинет</div>
+              <form novalidate="" action="/profile">
+                <div class="popup__input">
+                        <div class="input">
+                          <input class="input__input" value="" required="" type="phone" id="auth-phone">
+                          <label class="input__label">Телефон</label>
+                          <label class="input__remaning" style="display:none;"></label>
+                          <div class="input__error"></div>
+                        </div>
+                </div>
+                      <input class="button button--block" type="submit" value="Войти">
+                      
+                <div class="popup__error"></div>
+              </form>
+            </div>
+            <div class="popup" id="popup-confirm">
+              <div class="popup__close"></div>
+              <div class="popup__text not_activated">Введите пароль</div>
+              <div class="popup__desc not_activated">На Ваш телефон был отправлен пароль для входа в систему.</div>
+              <div class="popup__desc activated"><strong>Введите пароль, который ранее был отправлен Вам в СМС-сообщении</strong></div>
+              <form novalidate="">
+                <div class="popup__input">
+                        <div class="input">
+                          <input class="input__input" value="" required="" id="auth-password">
+                          <label class="input__label">Пароль</label>
+                          <label class="input__remaning" style="display:none;"></label>
+                          <div class="input__error"></div>
+                        </div>
+                </div>
+                      <input class="button button--block" type="submit" value="Подтвердить">
+                      
+                <div class="popup__error"></div>
+              </form>
+              <div class="popup__footer"><a class="popup__resend not_activated">Отправить повторно</a><a class="popup__resend activated">Сбросить пароль</a>
+                <div class="popup__success">Пароль отправлен смс-сообщением</div>
+              </div>
+            </div>
+            <div class="popup" id="popup-new-order">
+              <div class="popup__close"></div>
+              <header class="header" id="header">
+                <div class="header__form-wrapper">
+                  <div class="header__form-title">Закажите Экспресс Оценку прямо сейчас</div>
+                  <form class="header__form" novalidate="" action="order_step1">
+                    <div class="header__row" id="settlement">
+                      <div class="header__form-input">
+                              <div class="input">
+                                <input class="input__input" value="" required="">
+                                <label class="input__label">Населенный пункт</label>
+                                <label class="input__remaning" style="display:none;"></label>
+                                <div class="input__error"></div>
+                              </div>
+                      </div>
+                    </div>
+                    <div class="header__row">
+                      <div class="header__form-input header__address" id="address">
+                              <div class="input">
+                                <input class="input__input" value="" required="">
+                                <label class="input__label">Адрес объекта</label>
+                                <label class="input__remaning" style="display:none;"></label>
+                                <div class="input__error"></div>
+                              </div>
+                      </div>
+                      <div class="header__form-input header__street" id="street">
+                              <div class="input">
+                                <input class="input__input" value="" required="">
+                                <label class="input__label">Улица, дом</label>
+                                <label class="input__remaning" style="display:none;"></label>
+                                <div class="input__error"></div>
+                              </div>
+                      </div>
+                      <div class="header__form-input header__flat" id="flat">
+                              <div class="input">
+                                <input class="input__input" value="" required="">
+                                <label class="input__label">Кв.</label>
+                                <label class="input__remaning" style="display:none;"></label>
+                                <div class="input__error"></div>
+                              </div>
+                      </div>
+                    </div>
+                    <div class="header__row"><span class="form__checkbox">
+                        <input type="checkbox" id="is-new-building">
+                        <label for="is-new-building">Новостройка</label></span></div>
+                    <div class="header__row">
+                      <div class="header__form-input header__phone">
+                              <div class="input">
+                                <input class="input__input" value="" required="" type="phone">
+                                <label class="input__label">Телефон</label>
+                                <label class="input__remaning" style="display:none;"></label>
+                                <div class="input__error"></div>
+                              </div>
+                      </div>
+                      <div class="header__form-input header__submit">
+                        <button class="header__submit-button">ЗАКАЗАТЬ ОЦЕНКУ</button>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="header__form-error"></div>
+                </div>
+              </header>
+            </div>
+            <div class="popup" id="popup-error-message">
+              <div class="popup__close"></div>
+              <h3 class="popup-error-message-title"></h3>
+              <div class="popup-error-message-content"></div>
+            </div>
+    </div>
+  </body>
+  <script>
+    var JS_PUBLIC_PATH = 'js/';
+    var SUGGEST_KEY = "fdd27007fe8069d376aa269885162a16ef0e55d4";
+    var ITEMS_PER_PAGE = 20;
+    var PARTNERS = { 1: "TEST", 2: "TEST2", 3: "TEST3" }
+    
+  </script>
+  <script>
+    var API_URL = location.protocol !== 'https:' ? 'https://test-fa.srg-it.ru/' : '/api/'
+    
+  </script>
+  <script src="js/app.js"></script>
+</html>
