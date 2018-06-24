@@ -1,36 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Тестовое задание</title>
-</head>
-<body>
-
-<p>
-    Задача предполагает решение с использованием нативного javascript любой версии и без использования каких-либо
-    библиотек. Решение нужно выложить на гитхабе и выслать нам ссылку на него.
-    Заранее благодарим за готовность уделить время!
-    Задача: Известно, что в git репозитории начиная с какого то коммита, все коммиты плохие. Нужно написать функцию
-    поиска первого плохого коммита за оптимальное время. Необходимо учесть, что чтение коммита из репозитория - это
-    долгая операция.
-</p>
-<pre>
-    #!/usr/bin/env node
-
-    const exec = require('child_process').exec;
-
-    exec(`git log -S"${process.argv[2]}" --oneline`, (err, stdout, stderr) => {
-      const commits = stdout.split('\n');
-      commits.splice(-1,1);
-      process.stdout.write(`${commits.pop()}\n`)
-    });
-</pre>
-
-Тестирование на репозитории <a href="https://github.com/legodemon/15puzzle">https://github.com/legodemon/15puzzle</a>
-
-<pre>
-    ./gitSearch.js "onClick={() => move(item)} className={'chip'}"
-</pre>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <title>Landing Ortnec</title>
+  <link href="style.css" rel="stylesheet"></head>
+  <body>
+    <div id="container"></div>
+  <script type="text/javascript" src="main.js"></script></body>
 </html>
